@@ -124,7 +124,7 @@ startButton.addEventListener ('click', startGame);
 function startGame () {
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = [indexVariable]
+    currentQuestionIndex = 0
     setNextQuestion()
 }
 
@@ -138,12 +138,12 @@ function showQuestion (question) {
     document.getElementById("left-container").style.display = 'none'
     document.getElementById("container").style.display = 'none'
     document.getElementById("right-container").style.display = 'block'; 
-    questionElement.innerText = questions[indexVariable].question
+    questionElement.innerText = questions[0].question
 
-   answer1.innerText = questions[indexVariable].answers.answer1.text; 
-   answer2.innerText = questions[indexVariable].answers.answer2.text; 
-   answer3.innerText = questions[indexVariable].answers.answer3.text; 
-   answer4.innerText = questions[indexVariable].answers.answer4.text; 
+   answer1.innerText = questions[0].answers.answer1.text; 
+   answer2.innerText = questions[0].answers.answer2.text; 
+   answer3.innerText = questions[0].answers.answer3.text; 
+   answer4.innerText = questions[0].answers.answer4.text; 
     
 }
 
@@ -188,10 +188,10 @@ rightContainer.addEventListener('click', function(event){
       if(event.target.type == 'submit'){
         /// check the answer
        let answer = event.target.innerText; 
-        if(answer == questions[indexVariable++].answers.correctAnswer.text){
+        if(answer == questions[0++].answers.correctAnswer.text){
             setNextQuestion (currentQuestionIndex)
         } 
-        else if (answer !==questions[indexVariable++].answers.correctAnswer.text) {
+        else if (answer !==questions[0++].answers.correctAnswer.text) {
             setNextQuestion(currentQuestionIndex)
         }
     }})
