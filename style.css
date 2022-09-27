@@ -1,0 +1,127 @@
+:root{
+    background-color: lightsalmon;
+}
+
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px;
+    display: block;
+}
+#home {
+    text-align: center;
+    font-size: 38.4px;
+}
+#startButton{
+    font-size: 38.4px;
+    padding: 32 px 0;
+    width: 480px;
+    text-align: center;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: orange;
+    background: linear-gradient(90deg, rgb(212, 108, 16), 0%, rgb(51, 25, 3) 100%);
+    border-radius: 4px;
+}
+#highscore-btn{
+    font-size: 38.4px;
+    padding: 32 px 0;
+    width: 480px;
+    text-align: center;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: orange;
+    background-color: peachpuff;
+    border-radius: 4px;
+}
+
+#startButton:hover, #highscore-btn:hover{
+    cursor: pointer;
+    box-shadow: 0,6.4px,22.4px,0 peachpuff;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+#highscore-btn:hover {
+    box-shadow: 0,6.4px,22.4px,0 peachpuff;
+}
+
+
+.title-container {
+    height: relative;
+    width: relative;
+    margin: auto; 
+    border-color: yellow;
+    border-style: solid;
+    text-align: center;
+}
+
+#left-container {
+    height: 100%;
+    width: relative;
+    position: fixed;
+    float: left;
+    border-color: black;
+    border-style: solid;
+    display: none;
+    
+}
+
+#right-container {
+    border-style: solid;
+    border-color: white;
+    height: relative;
+    width: 80%;
+    float:right;
+    height: 100%;
+    display: none;
+}
+
+
+
+#ques-number, #question-container {
+    margin-left: 28%;
+    border-inline: 5%;
+}
+
+#answer1, #answer2, #answer3, #answer4 {
+    display: flex;
+    margin-bottom: 12.8px;
+    width: 675px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: chocolate;
+}
+
+#answer1:hover, #answer2:hover,#answer3:hover,#answer4:hover {
+    cursor: pointer;
+    box-shadow: 0,6.4px,22.4px,0 peachpuff;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+ 
+button {
+    padding: 20px
+}
+
+#next-btn {
+    text-align: center;
+    position: absolute;
+}
+
+.progress {
+    float: right;
+    position: relative;
+}
+
+@media screen and (max-width: 760px) {
+    .trivia {
+        min-width: 640px;
+    }
+}
